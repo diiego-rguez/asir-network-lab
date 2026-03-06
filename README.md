@@ -33,6 +33,9 @@ Red interna:
 
 Los clientes reciben IP automáticamente mediante DHCP.
 
+---
+
+## Mapa de red
            ┌─────────────────────┐
            │ ServerPrincipal     │
            │ Debian 12           │
@@ -44,11 +47,10 @@ Los clientes reciben IP automáticamente mediante DHCP.
                192.168.50.0/24
         ┌────────────┼────────────┐
         │            │            │
-  Cliente1       WebApache     WebNginx
- Ubuntu 24.04     Debian 12     Debian 12
- DHCP              Apache        Nginx
+     Cliente1       WebApache     WebNginx
+    Ubuntu 24.04     Debian 12     Debian 12
+    DHCP              Apache        Nginx
  
-
 ---
 
 ## Servicios configurados
