@@ -1,15 +1,21 @@
 # asir-network-lab
 # ASIR Network Lab
 
-Laboratorio de administración de sistemas realizado con máquinas virtuales.
+Laboratorio de administración de sistemas realizado con máquinas virtuales para practicar la configuración de servicios de red en un entorno controlado.
 
-## Infraestructura
+El objetivo del proyecto es simular una pequeña infraestructura de red con servicios habituales en entornos de sistemas.
 
-Servicios configurados:
+---
+
+# Infraestructura
+
+Servicios configurados actualmente:
 
 - DHCP
 - DNS
-- Red interna
+- DNS inverso
+- Servidor web Apache
+- Servidor web Nginx
 
 Tecnologías utilizadas:
 
@@ -17,11 +23,13 @@ Tecnologías utilizadas:
 - Ubuntu Server 24.04
 - ISC DHCP Server
 - BIND9
+- Apache2
+- Nginx
 - VirtualBox
 
 ---
 
-## Topología de red
+# Topología de red
 
 Servidor principal:
 
@@ -31,31 +39,52 @@ Red interna:
 
 192.168.50.0/24
 
-Los clientes reciben IP automáticamente mediante DHCP.
+Los clientes reciben dirección IP automáticamente mediante DHCP.
 
 ---
 
-## Mapa de red
-           ┌─────────────────────┐
-           │ ServerPrincipal     │
-           │ Debian 12           │
-           │ DHCP + DNS          │
-           │ 192.168.50.10       │
-           └─────────┬───────────┘
-                     │
-             Red interna DiegoRed
-               192.168.50.0/24
-        ┌────────────┼────────────┐
-        │            │            │
-     Cliente1       WebApache     WebNginx
-    Ubuntu 24.04     Debian 12     Debian 12
-    DHCP              Apache        Nginx
- 
+# Mapa de red
+       ┌─────────────────────┐
+       │ ServerPrincipal     │
+       │ Debian 12           │
+       │ DHCP + DNS          │
+       │ 192.168.50.10       │
+       └─────────┬───────────┘
+                 │
+         Red interna DiegoRed
+           192.168.50.0/24
+    ┌────────────┼────────────┐
+    │            │            │
+    Cliente1  WebApache    WebNginx
+
 ---
 
-## Servicios configurados
+# Máquinas del laboratorio
 
-### DHCP
+ServidorPrincipal  
+Debian 12  
+192.168.50.10  
+Servicios: DHCP + DNS
+
+WebApache  
+Debian 12  
+192.168.50.101  
+Servicio: Apache
+
+WebNginx  
+Debian 12  
+192.168.50.102  
+Servicio: Nginx
+
+Cliente1  
+Ubuntu Server 24.04  
+IP obtenida por DHCP
+
+---
+
+# Configuración DHCP
+
+Servidor: ServidorPrincipal
 
 Rango asignado:
 
@@ -65,13 +94,17 @@ Gateway:
 
 192.168.50.10
 
-DNS:
+Servidor DNS:
 
 192.168.50.10
 
+También se han configurado **reservas DHCP** para los servidores web.
+
 ---
 
-### DNS
+# Configuración DNS
+
+Servidor: BIND9
 
 Dominio interno:
 
@@ -80,27 +113,11 @@ lab.local
 Registros configurados:
 
 serverprincipal.lab.local → 192.168.50.10  
-web.lab.local → 192.168.50.10  
-cliente1.lab.local → 192.168.50.100
+apache.lab.local → 192.168.50.101  
+nginx.lab.local → 192.168.50.102  
 
 ---
 
-## Pruebas de resolución
+# Pruebas de funcionamiento
 
-Servidor:
-
-dig serverprincipal.lab.local
-
-Cliente:
-
-nslookup web.lab.local
-
-Resultado esperado:
-
-192.168.50.10
-
----
-
-## Autor
-
-Laboratorio realizado para prácticas de ASIR.
+Resolución DNS desde el servidor:
