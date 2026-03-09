@@ -3,13 +3,13 @@
 
 Laboratorio de administración de sistemas realizado con máquinas virtuales para practicar la configuración de servicios de red en un entorno controlado.
 
-El objetivo del proyecto es simular una pequeña infraestructura de red con servicios habituales en entornos de sistemas.
+El objetivo del proyecto es simular una pequeña infraestructura de red con varios servidores y clientes dentro de una red interna.
 
 ---
 
-# Infraestructura
+## Infraestructura
 
-Servicios configurados actualmente:
+Servicios configurados:
 
 - DHCP
 - DNS
@@ -29,7 +29,7 @@ Tecnologías utilizadas:
 
 ---
 
-# Topología de red
+## Topología de red
 
 Servidor principal:
 
@@ -39,11 +39,11 @@ Red interna:
 
 192.168.50.0/24
 
-Los clientes reciben dirección IP automáticamente mediante DHCP.
+Los clientes de la red obtienen su dirección IP automáticamente mediante DHCP.
 
 ---
 
-# Mapa de red
+## Mapa de red
        ┌─────────────────────┐
        │ ServerPrincipal     │
        │ Debian 12           │
@@ -59,65 +59,37 @@ Los clientes reciben dirección IP automáticamente mediante DHCP.
 
 ---
 
-# Máquinas del laboratorio
+## Máquinas del laboratorio
 
 ServidorPrincipal  
 Debian 12  
 192.168.50.10  
-Servicios: DHCP + DNS
 
 WebApache  
 Debian 12  
-192.168.50.101  
-Servicio: Apache
 
 WebNginx  
 Debian 12  
-192.168.50.102  
-Servicio: Nginx
 
 Cliente1  
 Ubuntu Server 24.04  
-IP obtenida por DHCP
 
 ---
 
-# Configuración DHCP
+## Documentación
 
-Servidor: ServidorPrincipal
+La configuración detallada de cada servicio se encuentra en los siguientes documentos:
 
-Rango asignado:
-
-192.168.50.100 - 192.168.50.200
-
-Gateway:
-
-192.168.50.10
-
-Servidor DNS:
-
-192.168.50.10
-
-También se han configurado **reservas DHCP** para los servidores web.
+- docs-02-configuracion-red.md
+- docs-03-dhcp.md
+- docs-04-dns.md
+- docs-05-dns-inverso.md
+- docs-06-apache.md
+- docs-07-dhcp-reservas.md
+- docs-08-nginx.md
 
 ---
 
-# Configuración DNS
+## Autor
 
-Servidor: BIND9
-
-Dominio interno:
-
-lab.local
-
-Registros configurados:
-
-serverprincipal.lab.local → 192.168.50.10  
-apache.lab.local → 192.168.50.101  
-nginx.lab.local → 192.168.50.102  
-
----
-
-# Pruebas de funcionamiento
-
-Resolución DNS desde el servidor:
+Laboratorio realizado como práctica de administración de sistemas (ASIR).
