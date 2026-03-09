@@ -5,6 +5,7 @@ Servicio instalado:
 ISC DHCP Server
 
 El servidor DHCP se ejecuta en la máquina **ServerPrincipal** y se encarga de asignar direcciones IP automáticamente a los clientes de la red interna del laboratorio.
+
 <img width="757" height="247" alt="dhcp-servicio-activo" src="https://github.com/user-attachments/assets/6d96c0e0-d036-49f5-b148-384042c00928" />
 
 ---
@@ -48,7 +49,6 @@ Las direcciones IP asignadas por el servidor DHCP se registran en el archivo:
 
 /var/lib/dhcp/dhcpd.leases
 
-
 <img width="614" height="484" alt="dhcp-leases" src="https://github.com/user-attachments/assets/0a8c3586-6833-4123-8ce9-0c7bc87d0cf9" />
 
 
@@ -65,6 +65,7 @@ ip a
 Resultado esperado:
 
 192.168.50.100
+
 <img width="812" height="429" alt="cliente-ip-dhcp" src="https://github.com/user-attachments/assets/b981b7e6-0579-425d-9650-78143880b454" />
 
 
@@ -77,5 +78,6 @@ Desde Cliente1:
 ping 192.168.50.10
 
 El cliente puede comunicarse con el servidor principal de la red.
+
 <img width="517" height="244" alt="prueba-conectividad-cliente1" src="https://github.com/user-attachments/assets/9ab36661-f4ac-4b8d-b782-27f05937a799" />
 
