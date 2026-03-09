@@ -37,22 +37,22 @@ Archivo utilizado:
 /etc/network/interfaces
 
 Contenido configurado:
-auto lo
-iface lo inet loopback
-
-auto enp0s3
-iface enp0s3 inet dhcp
-
-auto enp0s8
-iface enp0s8 inet static
-address 192.168.50.10
-netmask 255.255.255.0
+auto lo  
+iface lo inet loopback  
+  
+auto enp0s3  
+iface enp0s3 inet dhcp  
+  
+auto enp0s8  
+iface enp0s8 inet static  
+address 192.168.50.10  
+netmask 255.255.255.0  
 
 ---
 
 ## Comprobación
 
-Se comprueba la configuración de red del servidor utilizando:
+Se comprueba la configuración de red del servidor utilizando:  
 ip a
 
 
