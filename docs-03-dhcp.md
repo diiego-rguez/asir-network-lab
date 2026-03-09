@@ -49,7 +49,8 @@ Las direcciones IP asignadas por el servidor DHCP se registran en el archivo:
 
 /var/lib/dhcp/dhcpd.leases
 
-<img width="614" height="484" alt="dhcp-leases" src="https://github.com/user-attachments/assets/0a8c3586-6833-4123-8ce9-0c7bc87d0cf9" />
+<img width="707" height="550" alt="dhcp-leases" src="https://github.com/user-attachments/assets/30d0d92c-5d80-4b7c-874a-6bb5efa8de72" />
+
 
 
 ---
@@ -66,7 +67,8 @@ Resultado esperado:
 
 192.168.50.100
 
-<img width="812" height="429" alt="cliente-ip-dhcp" src="https://github.com/user-attachments/assets/b981b7e6-0579-425d-9650-78143880b454" />
+<img width="821" height="350" alt="cliente-ip-dhcp" src="https://github.com/user-attachments/assets/301f8b45-7c03-45f8-8382-a0907b04d47c" />
+
 
 
 ---
