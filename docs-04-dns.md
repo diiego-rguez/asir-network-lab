@@ -17,30 +17,37 @@ lab.local
 
 ## Archivo de zona
 
+Archivo de configuración de la zona:
+
 /etc/bind/db.lab.local
 
-Registros:
+Registros configurados:
 
 serverprincipal.lab.local → 192.168.50.10  
-web.lab.local → 192.168.50.10  
+apache.lab.local → 192.168.50.101  
+nginx.lab.local → 192.168.50.102  
 cliente1.lab.local → 192.168.50.100
 
 ---
 
 ## Comprobación desde servidor
 
-dig serverprincipal.lab.local
+Desde el propio servidor DNS se comprueba la resolución utilizando:
+
+dig apache.lab.local
 
 Resultado esperado:
 
-192.168.50.10
+192.168.50.101
 
 ---
 
 ## Comprobación desde cliente
 
-nslookup web.lab.local
+Desde Cliente1 se comprueba la resolución del dominio:
+
+nslookup nginx.lab.local
 
 Resultado esperado:
 
-192.168.50.10
+192.168.50.102
