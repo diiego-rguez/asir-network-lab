@@ -63,10 +63,6 @@ Comprobación en Cliente1:
 
 ip a
 
-Resultado esperado:
-
-192.168.50.100
-
 <img width="821" height="350" alt="cliente-ip-dhcp" src="https://github.com/user-attachments/assets/301f8b45-7c03-45f8-8382-a0907b04d47c" />
 
 
