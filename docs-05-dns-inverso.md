@@ -1,4 +1,4 @@
-# docs-docs-05-dns-inverso.md
+# docs-05-dns-inverso.md
 # DNS Inverso (PTR)
 
 Se configura una zona inversa para permitir la resolución de IP a nombre.
