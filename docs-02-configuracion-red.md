@@ -1,3 +1,4 @@
+<img width="783" height="413" alt="interfaces-servidor" src="https://github.com/user-attachments/assets/975aea88-b619-4ff9-a97f-70a67db21e19" />
 # docs-02-configuracion-red.md
 # Configuración de red del servidor
 
