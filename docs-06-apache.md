@@ -21,7 +21,7 @@ Apache2
 
 ## Instalación
 
-Para instalar Apache se habilita temporalmente un adaptador NAT para permitir acceso a los repositorios.
+Para instalar Apache se habilita temporalmente un adaptador NAT en la máquina para permitir acceso a los repositorios.
 
 apt update  
 apt install apache2
@@ -32,11 +32,15 @@ Una vez instalado el servicio, la máquina vuelve a utilizar únicamente la red 
 
 ## Comprobación del servicio
 
+Se comprueba que el servicio está activo:
+
 systemctl status apache2
 
-También se comprueba que el servidor escucha en el puerto 80:
+También se verifica que el servidor está escuchando en el puerto 80:
 
 ss -tulpn | grep 80
+
+<img width="1177" height="434" alt="apache-servicio-activo-y-puerto-80" src="https://github.com/user-attachments/assets/cdd1fba0-8767-456a-8b21-3b005d284bee" />
 
 ---
 
@@ -46,7 +50,7 @@ Se modifica la página web por defecto:
 
 /var/www/html/index.html
 
-Contenido de prueba para verificar el funcionamiento del servidor.
+Con contenido personalizado para comprobar el funcionamiento del servidor web.
 
 ---
 
@@ -56,6 +60,4 @@ Desde Cliente1 se comprueba la resolución DNS y el acceso al servidor web:
 
 curl apache.lab.local
 
-Resultado esperado:
-
-El cliente recibe la página servida por el servidor Apache.
+<img width="490" height="306" alt="curl-apache-lab-local" src="https://github.com/user-attachments/assets/7d151248-e67b-4731-b89b-271debbbc0ae" />
