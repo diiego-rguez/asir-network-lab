@@ -13,19 +13,16 @@ El servidor DHCP se ejecuta en la máquina **ServerPrincipal** y se encarga de a
 
 enp0s8
 
----
 
 ## Red del laboratorio
 
 192.168.50.0/24
 
----
 
 ## Rango de direcciones
 
 192.168.50.100 - 192.168.50.200
 
----
 
 ## Gateway (router)
 
@@ -37,13 +34,11 @@ enp0s8
 
 192.168.50.10
 
----
 
 ## Dominio interno
 
 lab.local
 
----
 <img width="578" height="379" alt="configuracion-dhcp" src="https://github.com/user-attachments/assets/09329655-f81f-481a-b9b5-93f60380c44b" />
 
 ---
