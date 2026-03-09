@@ -26,7 +26,6 @@ Registros configurados:
 serverprincipal.lab.local → 192.168.50.10  
 apache.lab.local → 192.168.50.101  
 nginx.lab.local → 192.168.50.102  
-cliente1.lab.local → 192.168.50.100
 
 ---
 
