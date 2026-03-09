@@ -32,7 +32,7 @@ Se configura una zona DNS inversa para permitir la resolución de direcciones IP
 
 Desde el servidor se comprueba la resolución inversa:
 
-nslookup 192.168.50.10
+nslookup 192.168.50.10 y dig -x 192.168.50.10
 
 <img width="606" height="481" alt="nslookup-inverso-servidor" src="https://github.com/user-attachments/assets/b9dfb214-2ece-404e-8aa5-924dbff53af5" />
 
