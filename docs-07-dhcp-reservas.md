@@ -1,4 +1,4 @@
-# docs-docs-07-dhcp-reservas.md
+# docs-07-dhcp-reservas.md
 # Reservas DHCP
 
 Se configuran reservas DHCP para servidores de la infraestructura.
