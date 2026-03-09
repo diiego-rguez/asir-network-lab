@@ -59,3 +59,4 @@ ip a
 La interfaz enp0s8 debe mostrar la dirección:
 
 192.168.50.10
+<img width="819" height="424" alt="configuracion-red-servidor" src="https://github.com/user-attachments/assets/cf12b4a3-4f90-4aca-b8ba-94a3b3d0e4bd" />
