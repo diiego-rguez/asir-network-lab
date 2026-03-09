@@ -47,6 +47,8 @@ lab.local
 Las direcciones IP asignadas por el servidor DHCP se registran en el archivo:
 
 /var/lib/dhcp/dhcpd.leases
+
+
 <img width="614" height="484" alt="dhcp-leases" src="https://github.com/user-attachments/assets/0a8c3586-6833-4123-8ce9-0c7bc87d0cf9" />
 
 
