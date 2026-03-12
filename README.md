@@ -1,23 +1,24 @@
 # asir-network-lab
 # ASIR Network Lab
 
-Laboratorio de administración de sistemas realizado con máquinas virtuales para practicar la configuración de servicios de red en un entorno controlado.
+Laboratorio de administración de sistemas realizado con máquinas virtuales para simular una infraestructura de red en un entorno controlado.
 
-El objetivo del proyecto es simular una pequeña infraestructura de red con varios servidores y clientes dentro de una red interna.
+El proyecto tiene como objetivo practicar la configuración de servicios esenciales en redes Linux.
 
 ---
 
-## Infraestructura
-
-Servicios configurados:
+## Servicios implementados
 
 - DHCP
 - DNS
 - DNS inverso
+- Reservas DHCP
 - Servidor web Apache
 - Servidor web Nginx
 
-Tecnologías utilizadas:
+---
+
+## Tecnologías utilizadas
 
 - Debian 12
 - Ubuntu Server 24.04
@@ -31,15 +32,15 @@ Tecnologías utilizadas:
 
 ## Topología de red
 
+Red interna del laboratorio:
+
+192.168.50.0/24
+
 Servidor principal:
 
 192.168.50.10
 
-Red interna:
-
-192.168.50.0/24
-
-Los clientes de la red obtienen su dirección IP automáticamente mediante DHCP.
+Los clientes obtienen dirección IP automáticamente mediante DHCP.
 
 ---
 
@@ -67,18 +68,21 @@ Debian 12
 
 WebApache  
 Debian 12  
+192.168.50.101  
 
 WebNginx  
 Debian 12  
+192.168.50.102  
 
 Cliente1  
 Ubuntu Server 24.04  
+IP obtenida por DHCP  
 
 ---
 
 ## Documentación
 
-La configuración detallada de cada servicio se encuentra en los siguientes documentos:
+Configuración detallada disponible en:
 
 - docs-02-configuracion-red.md
 - docs-03-dhcp.md
@@ -92,4 +96,4 @@ La configuración detallada de cada servicio se encuentra en los siguientes docu
 
 ## Autor
 
-Laboratorio realizado como práctica de administración de sistemas (ASIR).
+Proyecto realizado como práctica de administración de sistemas (ASIR).
