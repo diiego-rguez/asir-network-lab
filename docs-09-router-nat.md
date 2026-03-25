@@ -118,8 +118,8 @@ apt install iptables-persistent
 
 Guardar configuración:
 
-netfilter-persistent save o durante la instalación:
-
+-netfilter-persistent save
+-o durante la instalación aceptar guardar las reglas IPv4 e IPv6:
 
 <img width="963" height="680" alt="iptables_persistent" src="https://github.com/user-attachments/assets/7ad43e30-6113-44d7-a85e-f75bbdd95527" />
 
