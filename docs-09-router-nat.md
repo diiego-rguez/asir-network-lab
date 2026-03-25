@@ -124,6 +124,11 @@ o durante la instalación aceptar guardar las reglas IPv4 e IPv6 actuales:
 
 <img width="963" height="680" alt="iptables_persistent" src="https://github.com/user-attachments/assets/7ad43e30-6113-44d7-a85e-f75bbdd95527" />
 
+Comprobación:
+
+
+<img width="652" height="339" alt="rules v4" src="https://github.com/user-attachments/assets/8067a098-916d-4a25-a3dd-d5aa674e9fb3" />
+
 
 ---
 
@@ -141,10 +146,6 @@ Configuración actualizada:
 
 option routers 192.168.50.10; --> option routers 192.168.50.1;
 
-
-El gateway ahora es:
-
-192.168.50.1
 
 ---
 
