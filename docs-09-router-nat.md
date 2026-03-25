@@ -12,7 +12,6 @@ En esta fase se modifica la arquitectura para que todo el tráfico salga a trav�
 RouterPrincipal
 
 Sistema operativo:
-
 Debian 13
 
 ---
@@ -35,21 +34,9 @@ Archivo configurado:
 
 Configuración aplicada:
 
-auto lo
 
-iface lo inet loopback
+<img width="695" height="354" alt="ip_router" src="https://github.com/user-attachments/assets/9dc9029c-7438-4c0b-b4c2-912e8c83fa19" />
 
-
-auto enp0s3
-
-iface enp0s3 inet dhcp
-
-auto enp0s8
-
-iface enp0s8 inet static
-
-   address 192.168.50.1 
-   netmask 255.255.255.0 
 
 La interfaz enp0s8 se conecta a la red interna DiegoRed y actuará como puerta de enlace para los clientes.
 
