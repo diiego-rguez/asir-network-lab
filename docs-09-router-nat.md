@@ -190,6 +190,10 @@ Resolución DNS:
 
 ping google.com
 
+
+<img width="730" height="618" alt="cambio_router_cliente" src="https://github.com/user-attachments/assets/8bf1ec1d-bd21-4581-a646-9c87c3b1163a" />
+
+
 ---
 
 ## Resultado
@@ -202,15 +206,3 @@ Los equipos de la red interna pueden:
 - salir a internet a través del router principal
 
 ---
-
-## Capturas recomendadas
-
-sysctl net.ipv4.ip_forward
-
-iptables -t nat -L
-
-ip route
-
-ping 8.8.8.8
-
-ping google.com
