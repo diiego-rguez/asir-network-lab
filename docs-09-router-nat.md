@@ -105,6 +105,9 @@ Comprobación:
 iptables -L  
 iptables -t nat -L
 
+
+<img width="968" height="673" alt="instalación_configuración_iptables" src="https://github.com/user-attachments/assets/dfe5b9fe-3205-44a7-b13b-74956e93bba9" />
+
 ---
 
 ## Guardar reglas iptables
