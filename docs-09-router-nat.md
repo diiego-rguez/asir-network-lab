@@ -66,11 +66,8 @@ sysctl --system
 
 Comprobación:
 
-sysctl net.ipv4.ip_forward
+<img width="734" height="142" alt="net ipv4 ip_forward router" src="https://github.com/user-attachments/assets/567bf2bc-66da-42fe-8f79-065aa14dae31" />
 
-Resultado esperado:
-
-net.ipv4.ip_forward = 1
 
 ---
 
