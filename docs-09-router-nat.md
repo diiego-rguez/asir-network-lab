@@ -35,16 +35,16 @@ Archivo configurado:
 
 Configuración aplicada:
 
-auto lo
+auto lo 
 iface lo inet loopback
 
-auto enp0s3
+auto enp0s3 
 iface enp0s3 inet dhcp
 
-auto enp0s8
-iface enp0s8 inet static
-      address 192.168.50.1
-      netmask 255.255.255.0
+auto enp0s8 
+iface enp0s8 inet static 
+      address 192.168.50.1 
+      netmask 255.255.255.0 
 
 La interfaz enp0s8 se conecta a la red interna DiegoRed y actuará como puerta de enlace para los clientes.
 
