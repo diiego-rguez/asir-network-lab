@@ -120,7 +120,7 @@ Guardar configuración:
 
 netfilter-persistent save
 
-o durante la instalación aceptar guardar las reglas IPv4 e IPv6:
+o durante la instalación aceptar guardar las reglas IPv4 e IPv6 actuales:
 
 <img width="963" height="680" alt="iptables_persistent" src="https://github.com/user-attachments/assets/7ad43e30-6113-44d7-a85e-f75bbdd95527" />
 
@@ -139,17 +139,8 @@ Archivo modificado:
 
 Configuración actualizada:
 
-subnet 192.168.50.0 netmask 255.255.255.0 {
+option routers 192.168.50.10; --> option routers 192.168.50.1;
 
-range 192.168.50.100 192.168.50.200;
-
-option routers 192.168.50.1;
-
-option domain-name-servers 192.168.50.10;
-
-option domain-name "lab.local";
-
-}
 
 El gateway ahora es:
 
