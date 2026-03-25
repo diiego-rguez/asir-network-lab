@@ -41,9 +41,10 @@ Configuración aplicada:
 <img width="645" height="387" alt="router-ip-buena" src="https://github.com/user-attachments/assets/f2d99414-4922-4482-b503-21251a679326" />
 
 
-La interfaz enp0s8 se conecta a la red interna DiegoRed y actuará como puerta de enlace para los clientes.
-
 <img width="648" height="179" alt="router-internet" src="https://github.com/user-attachments/assets/550dac40-db6f-462a-828a-1e57ed67c721" />
+
+
+La interfaz enp0s8 se conecta a la red interna DiegoRed y actuará como puerta de enlace para los clientes.
 
 ---
 
