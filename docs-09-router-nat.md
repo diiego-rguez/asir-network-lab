@@ -178,10 +178,6 @@ default via 192.168.50.1
 
 ## Pruebas de conectividad
 
-Conectividad con el router:
-
-ping 192.168.50.1
-
 Conectividad a internet:
 
 ping 8.8.8.8
