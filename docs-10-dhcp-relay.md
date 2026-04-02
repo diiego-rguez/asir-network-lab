@@ -252,3 +252,5 @@ Esto permite verificar qué direcciones han sido asignadas.
 Comando:
 
 cat /var/lib/dhcp/dhcpd.leases
+
+<img width="739" height="686" alt="dhcpd-leases" src="https://github.com/user-attachments/assets/ad7f6800-c3dc-4f80-9c8e-2ca55573e91b" />
