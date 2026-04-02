@@ -40,11 +40,11 @@ El proyecto tiene como objetivo practicar la configuración de servicios esencia
 
 El laboratorio está compuesto por **dos redes internas** conectadas mediante routers.
 
-Red principal (servidores):
+Red principal (DiegoRed):
 
 192.168.50.0/24
 
-Red de clientes:
+Red de secundaria (ClienteRed):
 
 192.168.60.0/24
 
