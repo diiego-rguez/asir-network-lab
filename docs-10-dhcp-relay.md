@@ -59,6 +59,23 @@ sudo netplan apply
 
 ---
 
+## Habilitar enrutamiento
+
+Para que el sistema funcione como router, se habilita el reenvío de paquetes IP.
+
+Editar archivo:
+/etc/sysctl.conf
+
+Añadir o descomentar:
+net.ipv4.ip_forward=1
+
+<img width="831" height="469" alt="sysctl_conf_relay" src="https://github.com/user-attachments/assets/b5a3fc04-c083-4fff-86da-cfc8c3a7b327" />
+
+Aplicar cambios:
+sudo sysctl -p
+
+---
+
 ## Ruta hacia la segunda red en RouterPrincipal
 
 Para que la red principal pueda comunicarse con la red ClienteRed se añade una ruta estática en el router principal.
@@ -74,24 +91,6 @@ Configuración utilizada:
 Esta ruta indica que para llegar a la red 192.168.60.0/24 se debe enviar el tráfico al RouterRelay
 
 ---
-
-## Habilitar enrutamiento
-
-Para que el sistema funcione como router, en el RelayDHCP se habilita el reenvío de paquetes IP.
-
-Editar archivo:
-/etc/sysctl.conf
-
-Añadir o descomentar:
-net.ipv4.ip_forward=1
-
-<img width="831" height="469" alt="sysctl_conf_relay" src="https://github.com/user-attachments/assets/b5a3fc04-c083-4fff-86da-cfc8c3a7b327" />
-
-Aplicar cambios:
-sudo sysctl -p
-
----
-
 ## Instalación del servicio DHCP Relay
 
 El router relay reenvía las peticiones DHCP al servidor situado en la red principal.
