@@ -91,6 +91,26 @@ Configuración utilizada:
 Esta ruta indica que para llegar a la red 192.168.60.0/24 se debe enviar el tráfico al RouterRelay
 
 ---
+
+## Configuración de DHCP para la segunda red
+
+El servidor DHCP se configura para entregar direcciones también a la red ClienteRed.
+
+Archivo de configuración:
+
+/etc/dhcp/dhcpd.conf
+
+Configuración añadida: subnet 192.168.60.0 netmask 255.255.255.0 {}
+
+<img width="777" height="679" alt="ajuste_dhcpd_conf" src="https://github.com/user-attachments/assets/2c4aa9f6-d15f-4a52-a81c-a18aeb604972" />
+
+Se reinicia el servicio DHCP para aplicar la nueva configuración y se comprueba su estado:
+
+<img width="860" height="464" alt="status_dhcp_server" src="https://github.com/user-attachments/assets/dcc9352e-c7f3-4d68-b58f-174449ee1f86" />
+
+
+---
+
 ## Instalación del servicio DHCP Relay
 
 El router relay reenvía las peticiones DHCP al servidor situado en la red principal.
