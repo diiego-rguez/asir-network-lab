@@ -82,3 +82,64 @@ El acceso a internet se realiza a través de un router con NAT.
                                                                              Cliente2
                                                                              Ubuntu Server 24.04
                                                                              IP obtenida por DHCP
+
+---
+
+## Máquinas del laboratorio
+
+RouterPrincipal  
+Debian 13  
+192.168.50.1  
+Router con NAT y enrutamiento entre redes  
+
+ServerPrincipal  
+Debian 12  
+192.168.50.10  
+Servidor DHCP y DNS  
+
+WebApache  
+Debian 12  
+192.168.50.101  
+Servidor web Apache  
+
+WebNginx  
+Debian 12  
+192.168.50.102  
+Servidor web Nginx  
+
+RouterRelay  
+Ubuntu Server 24.04  
+192.168.50.100 / 192.168.60.1  
+Relay DHCP entre redes  
+
+Cliente1  
+Ubuntu Server 24.04  
+Red 192.168.50.0/24  
+IP obtenida por DHCP  
+
+Cliente2  
+Ubuntu Server 24.04  
+Red 192.168.60.0/24  
+IP obtenida por DHCP mediante relay  
+
+---
+
+## Documentación
+
+Configuración detallada disponible en:
+
+- docs-02-configuracion-red.md
+- docs-03-dhcp.md
+- docs-04-dns.md
+- docs-05-dns-inverso.md
+- docs-06-apache.md
+- docs-07-dhcp-reservas.md
+- docs-08-nginx.md
+- docs-09-router-nat.md
+- docs-10-dhcp-relay.md
+
+---
+
+## Autor
+
+Proyecto realizado como práctica de administración de sistemas en red (ASIR).
