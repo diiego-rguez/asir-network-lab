@@ -3,16 +3,19 @@
 
 Laboratorio de administración de sistemas realizado con máquinas virtuales para simular una infraestructura de red en un entorno controlado.
 
-El proyecto tiene como objetivo practicar la configuración de servicios esenciales en redes Linux.
+El proyecto tiene como objetivo practicar la configuración de servicios esenciales en redes Linux, incluyendo enrutamiento entre redes, distribución de direcciones IP mediante DHCP y despliegue de servicios web.
 
 ---
 
 ## Servicios implementados
 
 - DHCP
+- DHCP Relay
 - DNS
 - DNS inverso
 - Reservas DHCP
+- Enrutamiento entre redes
+- NAT para salida a internet
 - Servidor web Apache
 - Servidor web Nginx
 
@@ -21,79 +24,61 @@ El proyecto tiene como objetivo practicar la configuración de servicios esencia
 ## Tecnologías utilizadas
 
 - Debian 12
+- Debian 13
 - Ubuntu Server 24.04
 - ISC DHCP Server
+- ISC DHCP Relay
 - BIND9
 - Apache2
 - Nginx
+- iptables (NAT)
 - VirtualBox
 
 ---
 
 ## Topología de red
 
-Red interna del laboratorio:
+El laboratorio está compuesto por **dos redes internas** conectadas mediante routers.
+
+Red principal (servidores):
 
 192.168.50.0/24
 
-Servidor principal:
+Red de clientes:
 
-192.168.50.10
+192.168.60.0/24
 
-Los clientes obtienen dirección IP automáticamente mediante DHCP.
+El acceso a internet se realiza a través de un router con NAT.
 
 ---
 
 ## Mapa de red
-       ┌─────────────────────┐
-       │ ServerPrincipal     │
-       │ Debian 12           │
-       │ DHCP + DNS          │
-       │ 192.168.50.10       │
-       └─────────┬───────────┘
-                 │
-         Red interna DiegoRed
-           192.168.50.0/24
-    ┌────────────┼────────────┐
-    │            │            │
-    Cliente1  WebApache    WebNginx
 
----
+                                                   INTERNET
+                                                      │
+                                                (NAT VirtualBox)
+                                                      │
+                                            ┌─────────────────┐
+                                            │ RouterPrincipal │
+                                            │ Debian 13       │
+                                            │ NAT + Routing   │
+                                            │ 192.168.50.1    │
+                                            └─────────┬───────┘
+                                                      │
+                                              Red interna DiegoRed
+                                                192.168.50.0/24
+                               ┌───────────────┬───────────────┬───────────────┐
+                               │               │               │               │
 
-## Máquinas del laboratorio
-
-ServidorPrincipal  
-Debian 12  
-192.168.50.10  
-
-WebApache  
-Debian 12  
-192.168.50.101  
-
-WebNginx  
-Debian 12  
-192.168.50.102  
-
-Cliente1  
-Ubuntu Server 24.04  
-IP obtenida por DHCP  
-
----
-
-## Documentación
-
-Configuración detallada disponible en:
-
-- docs-02-configuracion-red.md
-- docs-03-dhcp.md
-- docs-04-dns.md
-- docs-05-dns-inverso.md
-- docs-06-apache.md
-- docs-07-dhcp-reservas.md
-- docs-08-nginx.md
-
----
-
-## Autor
-
-Proyecto realizado como práctica de administración de sistemas (ASIR).
+                            ServerPrincipal   WebApache     WebNginx       RouterRelay
+                            Debian 12         Debian 12      Debian 12      Ubuntu 24.04
+                            DHCP + DNS        Apache          Nginx          DHCP Relay
+                            192.168.50.10   192.168.50.101   192.168.50.102  192.168.50.100
+                                                                                │
+                                                                                │
+                                                                             Red ClienteRed
+                                                                             192.168.60.0/24
+                                                                                │
+                                                                             Cliente2
+                                                                             Ubuntu Server 24.04
+                                                                             IP obtenida por DHCP
