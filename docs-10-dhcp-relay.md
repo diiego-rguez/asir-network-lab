@@ -238,3 +238,17 @@ El cliente de la segunda red debe poder resolver nombres utilizando el servidor 
 Desde el cliente se accede a los servidores web de la red principal.
 
 <img width="552" height="685" alt="todo_correcto_cliente22" src="https://github.com/user-attachments/assets/c508b893-e09c-4371-a6fc-aa1fa62753c5" />
+
+---
+
+## Concesiones DHCP registradas
+
+El servidor DHCP guarda las direcciones entregadas a los clientes en el archivo:
+
+/var/lib/dhcp/dhcpd.leases
+
+Esto permite verificar qué direcciones han sido asignadas.
+
+Comando:
+
+cat /var/lib/dhcp/dhcpd.leases
