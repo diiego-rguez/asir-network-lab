@@ -59,9 +59,25 @@ sudo netplan apply
 
 ---
 
+## Ruta hacia la segunda red en RouterPrincipal
+
+Para que la red principal pueda comunicarse con la red ClienteRed se añade una ruta estática en el router principal.
+
+Archivo de configuración:
+
+/etc/network/interfaces
+
+Configuración utilizada:
+
+<img width="603" height="454" alt="enrutamiento_router" src="https://github.com/user-attachments/assets/095391a6-96eb-41c6-87e1-8c20f29c504e" />
+
+Esta ruta indica que para llegar a la red 192.168.60.0/24 se debe enviar el tráfico al RouterRelay
+
+---
+
 ## Habilitar enrutamiento
 
-Para que el sistema funcione como router se habilita el reenvío de paquetes IP.
+Para que el sistema funcione como router, en el RelayDHCP se habilita el reenvío de paquetes IP.
 
 Editar archivo:
 /etc/sysctl.conf
