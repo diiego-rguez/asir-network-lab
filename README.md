@@ -67,12 +67,12 @@ El acceso a internet se realiza a través de un router con NAT.
                                                       │
                                               Red interna DiegoRed
                                                 192.168.50.0/24
-                               ┌───────────────┬───────────────┬───────────────┐
-                               │               │               │               │
+           ┌───────────────────┬───────────────┬───────────────┬───────────────┐
+           │                   │               │               │               │
 
-                            ServerPrincipal   WebApache     WebNginx       RouterRelay
-                            Debian 12         Debian 12      Debian 12      Ubuntu 24.04
-                            DHCP + DNS        Apache          Nginx          DHCP Relay
+        Cliente1           ServerPrincipal   WebApache     WebNginx       RouterRelay
+    Ubuntu Server 24.04     Debian 12         Debian 12      Debian 12      Ubuntu 24.04
+    IP obtenida por DHCP    DHCP + DNS        Apache          Nginx          DHCP Relay
                             192.168.50.10   192.168.50.101   192.168.50.102  192.168.50.100
                                                                                 │
                                                                                 │
